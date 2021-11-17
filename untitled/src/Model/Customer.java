@@ -1,25 +1,29 @@
 package untitled.src.Model;
 
-import untitled.src.View.RecieveInput;
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
 public class Customer implements ActionListener{
 
-    private String phoneNumber,name,address;
-    public Customer(String phoneNumber, String name, String address) {
+    private String phoneNumber,fName,lName,address,userName,password;
+    public Customer(String phoneNumber, String fName, String lName, String address, String userName, String password) {
         this.phoneNumber = phoneNumber;
-        this.name = name;
+        this.fName = fName;
+        this.lName = lName;
         this.address = address;
+        this.userName = userName;
+        this.password = password;
 
     }
 
     public Customer() {
         phoneNumber = "phoneNumber";
-        name = "name";
+        fName = "firstName";
+        lName = "lastName";
         address = "address";
+        userName = "userName";
+        password = "password";
 
     }
 
@@ -31,11 +35,18 @@ public class Customer implements ActionListener{
                 attribute = this.phoneNumber;
                 break;
             case 1:
-                attribute = this.name;
+                attribute = this.fName;
                 break;
             case 2:
+                attribute = this.lName;
+                break;
+            case 3:
                 attribute = this.address;
                 break;
+            case 4:
+                attribute = this.userName;
+                break;
+
         }
         return attribute;
     }
