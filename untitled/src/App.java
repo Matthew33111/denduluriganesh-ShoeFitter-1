@@ -10,8 +10,5 @@ public class App {
         Model model = new Model();
         View view = new View();
         Controller controller = new Controller(view, model);
-
-        Controller loginCntl= new Controller();
-
     }
 }

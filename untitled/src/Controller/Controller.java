@@ -17,11 +17,7 @@ public class Controller {
 
     private LoginUI theLoginUI;
     private CustomerList theCustomerList;
-    public void LoginCntl(){
-        theLoginUI = new LoginUI(this);
-        theCustomerList = new CustomerList();
-        showLoginUI();
-    }
+
     public CustomerList getCustomerList(){
         return theCustomerList;
     }
@@ -40,7 +36,9 @@ public class Controller {
     public Controller(View v, Model m) {
         model = m;
         view = v;
-
+        theLoginUI = new LoginUI(this);
+        theCustomerList = new CustomerList();
+        showLoginUI();
         TestHarness.TestHarness();
        // untitled.src.View.View.InitialSetUp();
     }

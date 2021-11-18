@@ -17,7 +17,7 @@ public class Customer implements ActionListener{
 
     }
 
-    public Customer(String s, String s1, String text, String txtPasswordText) {
+    public Customer() {
         phoneNumber = "phoneNumber";
         fName = "firstName";
         lName = "lastName";

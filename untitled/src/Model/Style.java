@@ -1,7 +1,6 @@
 package untitled.src.Model;
 
 import untitled.src.View.BasicDisplay;
-import untitled.src.View.RecieveInput;
 
 import javax.swing.*;
 import java.awt.event.*;
