@@ -11,7 +11,7 @@ public class App {
         View view = new View();
         Controller controller = new Controller(view, model);
 
-        LoginCntl loginCntl= new LoginCntl();
+        Controller loginCntl= new Controller();
 
     }
 }

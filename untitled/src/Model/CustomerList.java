@@ -6,7 +6,7 @@ public class CustomerList {
     private ArrayList<Customer> listOfCustomers = new ArrayList<>();
 
     public CustomerList(){
-        Customer u1 = new Customer("5708798797", "Jeff Dunham","123 Atherton Street");
+        Customer u1 = new Customer("5708798797", "Jeff", "Dunham", "123 Atherton Street", "MeganPenguin", "password123");
         listOfCustomers.add(u1);
 
     }

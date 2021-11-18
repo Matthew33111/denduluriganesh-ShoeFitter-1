@@ -17,7 +17,7 @@ public class Customer implements ActionListener{
 
     }
 
-    public Customer() {
+    public Customer(String s, String s1, String text, String txtPasswordText) {
         phoneNumber = "phoneNumber";
         fName = "firstName";
         lName = "lastName";
@@ -46,7 +46,9 @@ public class Customer implements ActionListener{
             case 4:
                 attribute = this.userName;
                 break;
-
+            case 5:
+                attribute = this.password;
+                break;
         }
         return attribute;
     }
@@ -54,7 +56,7 @@ public class Customer implements ActionListener{
 
     public ArrayList<String> setAttributes(){
         ArrayList<String> attributes = new ArrayList();
-        for(int i = 0; i < 2; ++i){
+        for(int i = 0; i < 5; ++i){
             attributes.add(setAttribute(i));
         }
         return attributes;
@@ -69,10 +71,19 @@ public class Customer implements ActionListener{
                 name = "phoneNumber";
                 break;
             case 1:
-                name = "name";
+                name = "fName";
                 break;
             case 2:
+                name = "lName";
+                break;
+            case 3:
                 name = "address";
+                break;
+            case 4:
+                name = "userName";
+                break;
+            case 5:
+                name = "password";
                 break;
         }
         return name;
@@ -81,7 +92,7 @@ public class Customer implements ActionListener{
 
     public ArrayList <String> getAttributeNames(){
         ArrayList<String> names = new ArrayList();
-        for(int i = 0; i < 2; ++i){
+        for(int i = 0; i < 5; ++i){
             names.add(getAttributeName(i));
         }
         return names;
@@ -95,12 +106,20 @@ public class Customer implements ActionListener{
         this.phoneNumber = phoneNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getFName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getLName() {
+        return lName;
+    }
+
+    public void setLName(String lName) {
+        this.lName = lName;
     }
 
     public String getAddress() {return address; }
@@ -109,9 +128,25 @@ public class Customer implements ActionListener{
         this.address = address;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString(){
-        return "PhoneNumber: " + getPhoneNumber() + " Name: " + getName() + " Address:" + getAddress();
+        return "PhoneNumber: " + getPhoneNumber() + " First Name: " + getFName() + "Last Name: " + getLName() + " Address: " + getAddress() + "UserName: " + getUserName() + "Password: " + getPassword();
     }
 
     @Override
