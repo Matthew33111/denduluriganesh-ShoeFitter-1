@@ -1,11 +1,8 @@
 package untitled.src.Model;
 
-import untitled.src.View.BasicDisplay;
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import untitled.src.View.BasicDisplay;
 
 public class Style implements ActionListener{
 
