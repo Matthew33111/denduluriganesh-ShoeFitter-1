@@ -2,6 +2,8 @@ package untitled.src.View;
 
 import javax.swing.*;
 import untitled.src.Controller.Controller;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RegisterUI extends JFrame{
     private JTextField textField1;
@@ -14,11 +16,17 @@ public class RegisterUI extends JFrame{
     private JButton cancelButton;
     private JPanel RegisterPanel;
 
-    public RegisterUI(){
+    public RegisterUI() {
         setContentPane(RegisterPanel);
         setTitle("Registration");
         setSize(500, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
+
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
+            }
+        });
     }
 }

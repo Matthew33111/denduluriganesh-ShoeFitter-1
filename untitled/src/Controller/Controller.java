@@ -23,9 +23,20 @@ public class Controller {
     public CustomerList getCustomerList(){
         return theCustomerList;
     }
-    public void showLoginUI(){
-        theLoginUI.setVisible(true);
+
+
+
+    public Controller(View v, Model m) {
+        model = m;
+        view = v;
+
+        MainFrame myFrame = new MainFrame();
+        RegisterUI myRegistration = new RegisterUI();
+        theLoginUI = new LoginUI(this);
+        theCustomerList = new CustomerList();
+        TestHarness.TestHarness();
     }
+
     public void requestAuthenticate(Customer customer){
         if(theCustomerList.authenticate(customer)==true){
             System.out.println("Valid user");
@@ -34,15 +45,19 @@ public class Controller {
             System.out.println("Invalid username/password");
     }
 
-    public Controller(View v, Model m) {
-        model = m;
-        view = v;
+    private void addListeners(){
+        userLoginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lu.setVisible(true);
+            }
+        });
 
-        MainFrame myFrame = new MainFrame();
-        RegisterUI myRegisration = new RegisterUI();
-        theLoginUI = new LoginUI(this);
-        theCustomerList = new CustomerList();
-        showLoginUI();
-        TestHarness.TestHarness();
+        registerNewUserButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ru.setVisible(true);
+            }
+        });
     }
 }
