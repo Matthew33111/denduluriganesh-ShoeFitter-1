@@ -16,6 +16,8 @@ public class RegisterUI extends JFrame{
     private JButton cancelButton;
     private JPanel RegisterPanel;
 
+
+
     public RegisterUI() {
         setContentPane(RegisterPanel);
         setTitle("Registration");
@@ -29,4 +31,5 @@ public class RegisterUI extends JFrame{
             }
         });
     }
+
 }

@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class LoginUI extends JFrame{
 
-    private Controller theLoginCntl;
+    public Controller theLoginCntl;
     private JPanel panel1;
     private JLabel lblUserName;
     private JLabel lblPassword;
