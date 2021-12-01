@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Style implements ActionListener{
+public class Style extends Shoe {
 
         private String color,model,brand,material,sole,size;
         public Style(String color, String model, String brand,String material, String sole, String size) {
@@ -98,10 +98,7 @@ public class Style implements ActionListener{
         return names;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-    }
 
         public String getColor() {
             return color;

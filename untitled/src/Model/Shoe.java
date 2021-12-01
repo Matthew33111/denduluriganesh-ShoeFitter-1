@@ -16,6 +16,7 @@ public class Shoe {
         contactName = "contactName";
         contactphoneNumber = "contactphoneNumber";
     }
+
     public String getName() {
         return name;
     }

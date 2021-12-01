@@ -43,7 +43,6 @@ public class Controller {
         RegisterUI myRegistration = new RegisterUI();
         theLoginUI = new LoginUI(this);
         theCustomerList = new CustomerList();
-        //showLoginUI();
         TestHarness.TestHarness();
 
         myFrame.getJb().addActionListener(new ActionListener() {
