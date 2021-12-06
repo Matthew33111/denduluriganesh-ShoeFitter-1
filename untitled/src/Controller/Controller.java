@@ -30,7 +30,7 @@ public class Controller {
     public void requestAuthenticate(Customer customer){
         if(theCustomerList.authenticate(customer)==true){
             System.out.println("Valid user");
-            setUser(customer);
+            //setUser(customer);
             untitled.src.View.View.InitialSetUp();
         }
         else
