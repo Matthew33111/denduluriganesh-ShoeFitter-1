@@ -56,7 +56,7 @@
           <text value="First Name:"/>
         </properties>
       </component>
-      <component id="8ee51" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="8ee51" class="javax.swing.JTextField" binding="userNameTextField">
         <constraints>
           <grid row="6" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -72,7 +72,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="51bc5" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="51bc5" class="javax.swing.JTextField" binding="addressTextField">
         <constraints>
           <grid row="4" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -80,7 +80,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="5a77a" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="5a77a" class="javax.swing.JTextField" binding="lastNameTextField">
         <constraints>
           <grid row="2" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -88,7 +88,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="c7f05" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="c7f05" class="javax.swing.JTextField" binding="firstNameTextField">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -98,7 +98,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="487c3" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="487c3" class="javax.swing.JTextField" binding="phoneNumberTextField">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

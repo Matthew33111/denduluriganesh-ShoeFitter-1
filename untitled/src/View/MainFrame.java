@@ -27,14 +27,7 @@ public class MainFrame extends JFrame{
 
         ru = new RegisterUI();
         lu = new LoginUI(theLoginCntl);
-/*
-        userLoginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                lu.setVisible(true);
-            }
-        });
-*/
+
         registerNewUserButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

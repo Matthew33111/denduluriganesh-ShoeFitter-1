@@ -12,6 +12,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import untitled.src.View.RegisterUI;
 
 public class Controller {
     Model model;
@@ -19,17 +20,18 @@ public class Controller {
 
     private LoginUI theLoginUI;
     private CustomerList theCustomerList;
+    public CustomerList sessionUser;
+    private RegisterUI registerUI;
 
-
-    public CustomerList getCustomerList(){
-        return theCustomerList;
-    }
     public void showLoginUI(){
         theLoginUI.setVisible(true);
     }
+
     public void requestAuthenticate(Customer customer){
         if(theCustomerList.authenticate(customer)==true){
             System.out.println("Valid user");
+            setUser(customer);
+            untitled.src.View.View.InitialSetUp();
         }
         else
             System.out.println("Invalid username/password");
@@ -45,11 +47,30 @@ public class Controller {
         theCustomerList = new CustomerList();
         TestHarness.TestHarness();
 
+
+
         myFrame.getJb().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 showLoginUI();
             }
         });
+
+        myRegistration.getJb().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showLoginUI();
+            }
+        });
+    }
+
+    public void setUser (Customer myCustomer){
+        while(!theCustomerList.equals(myCustomer)){
+            this.theCustomerList = sessionUser;
+        }
+    }
+
+    public CustomerList getUser(){
+        return sessionUser;
     }
 }
