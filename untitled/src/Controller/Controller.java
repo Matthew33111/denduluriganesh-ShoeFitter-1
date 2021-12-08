@@ -20,7 +20,7 @@ public class Controller {
 
     private LoginUI theLoginUI;
     private CustomerList theCustomerList;
-    public CustomerList sessionUser;
+    public Customer sessionUser;
     private RegisterUI registerUI;
 
     public void showLoginUI(){
@@ -30,7 +30,7 @@ public class Controller {
     public void requestAuthenticate(Customer customer){
         if(theCustomerList.authenticate(customer)==true){
             System.out.println("Valid user");
-            //setUser(customer);
+            setUser(customer);
             untitled.src.View.View.InitialSetUp();
         }
         else
@@ -64,13 +64,11 @@ public class Controller {
         });
     }
 
-    public void setUser (Customer myCustomer){
-        while(!theCustomerList.equals(myCustomer)){
-            this.theCustomerList = sessionUser;
-        }
+    public void setUser (Customer sessionUser){
+        this.sessionUser = sessionUser;
     }
 
-    public CustomerList getUser(){
+    public Customer getUser(){
         return sessionUser;
     }
 }

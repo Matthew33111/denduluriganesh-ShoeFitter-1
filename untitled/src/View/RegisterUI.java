@@ -34,6 +34,7 @@ public class RegisterUI extends JFrame{
                 if(myList.authenticateRegistration(customer)){
                     myList.addCustomerList(customer);
                 }
+                myList.writeUserListFile();
                 System.out.println(myList.getListOfCustomers());
             }
         });

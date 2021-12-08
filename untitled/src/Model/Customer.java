@@ -3,8 +3,9 @@ package untitled.src.Model;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Customer implements ActionListener{
+public class Customer implements ActionListener, Serializable{
 
     private String phoneNumber,fName,lName,address,userName,password;
     public Customer(String phoneNumber, String fName, String lName, String address, String userName, String password) {
