@@ -11,6 +11,10 @@ public class CentralUI extends JFrame{
     private JButton changeAccountInformationButton;
     private JPanel CentralUI;
     private AccountUI au;
+    private FootUI fu;
+    private BootUI bu;
+    private ShoeUI su;
+
 
     public CentralUI(){
         setContentPane(CentralUI);
@@ -20,11 +24,36 @@ public class CentralUI extends JFrame{
         setVisible(true);
 
         au = new AccountUI();
+        fu = new FootUI();
+        bu = new BootUI();
+        su = new ShoeUI();
+
 
         changeAccountInformationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 au.setVisible(true);
+            }
+        });
+
+        searchShoesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                su.setVisible(true);
+            }
+        });
+
+        searchBootsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bu.setVisible(true);
+            }
+        });
+
+        changeFootMeasurementsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fu.setVisible(true);
             }
         });
     }
