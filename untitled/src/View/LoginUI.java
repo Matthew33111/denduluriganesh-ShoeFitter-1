@@ -16,6 +16,7 @@ public class LoginUI extends JFrame{
     private JTextField txtPassword;
     private JButton btnCancel;
     private JButton btnLogin;
+    public Customer myUser;
 
     public LoginUI(Controller loginCntl){
         this.theLoginCntl = loginCntl;

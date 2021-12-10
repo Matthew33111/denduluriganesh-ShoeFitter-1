@@ -18,9 +18,9 @@ public class AccountUI extends JFrame{
     private JPasswordField passwordField1;
     private JTextField PhoneNumberField;
     private JPanel AccountUIFrame;
-    public Controller userList;
 
     CustomerList myList = new CustomerList();
+
 
     public AccountUI(){
         setContentPane(AccountUIFrame);
@@ -33,11 +33,7 @@ public class AccountUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Customer customer = new Customer(PhoneNumberField.getText(), FirstNameField.getText(), LastNameField.getText(), AddressField.getText(), UserNameField.getText(), passwordField1.getText());
-                CustomerList myUser = new CustomerList();
-                userList.getUser();
-                int i = userList.hashCode();
-                myList.editCustomerList(i, customer);
-                System.out.println(myList.getListOfCustomers());
+                myList.editCustomerList(customer);
             }
         });
 
@@ -45,6 +41,13 @@ public class AccountUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(1);
+            }
+        });
+
+        deleteUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myList.deleteCustomerList();
             }
         });
     }

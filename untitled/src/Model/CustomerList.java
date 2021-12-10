@@ -8,6 +8,8 @@ public class CustomerList implements Serializable{
     private ArrayList<Customer> listOfCustomers = new ArrayList();
     final static String outputFilePath = "listOfUsers.ser";
     public File file = new File(outputFilePath);
+    public Customer theUser;
+    public int testInt = 0;
 
 
     public CustomerList(){
@@ -30,24 +32,37 @@ public class CustomerList implements Serializable{
         listOfCustomers.add(newCustomer);
     }
 
-    public void deleteCustomerList(Integer i){
+    public void deleteCustomerList(){
+        int i = 0;
+        i = getMyUser();
         this.listOfCustomers.remove(i);
+        writeUserListFile();
     }
 
-    public void editCustomerList(Integer i, Customer customerNew){
-
+    public void editCustomerList(Customer customerNew){
+        int i = getMyUser();
         this.listOfCustomers.set(i, customerNew);
+        writeUserListFile();
     }
 
     public boolean authenticate(Customer customer){
         this.readUserListFile();
         for(Customer u:listOfCustomers){
             if(customer.getUserName().equals(u.getUserName()) && customer.getPassword().equals(u.getPassword())){
+               System.out.println(customer.hashCode());
+               testInt = customer.hashCode();
                 return true;
             }
         }
         return false;
     }
+
+    public Integer getMyUser(){
+        Integer myInteger =0;
+        myInteger = testInt;
+        return myInteger;
+    }
+
     public boolean checkUserName(Customer Customer){
         for(Customer u:listOfCustomers){
             if(Customer.getUserName().equals(u.getUserName())){
